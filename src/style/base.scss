@@ -1,0 +1,43 @@
+@import './_colors';
+
+@mixin box-shadow {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+@mixin hover-effect {
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    z-index: -2;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: darken($white, 15%);
+    transition: all 0.3s;
+    z-index: -1;
+  }
+  &:hover {
+    cursor: pointer;
+    &:before {
+      width: 100%;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,25 @@
+@import '../../style/_colors';
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  padding: 1rem 0 1rem 0;
+  width: 100%;
+  background-color: $navyblue;
+}
+
+.footer a {
+  text-align: center;
+  text-decoration: none;
+  margin: 0 auto;
+  color: $white;
+}
+
+.footer a:hover {
+  transition: all 0.3s;
+  color: $lightblue;
+}
+
+.footer a span {
+  color: red;
+}

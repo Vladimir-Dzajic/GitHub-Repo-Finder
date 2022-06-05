@@ -1,0 +1,86 @@
+@import '../../style/base';
+
+//scrollbar
+.search_results::-webkit-scrollbar {
+  width: 11px;
+}
+.search_results {
+  scrollbar-width: thin;
+  scrollbar-color: darken($white, 10%) darken($lightblue, 10%);
+}
+
+.search_results::-webkit-scrollbar-track {
+  background: darken($lightblue, 10%);
+}
+.search_results::-webkit-scrollbar-thumb {
+  background-color: darken($white, 10%);
+}
+//scrollbar
+
+.search_results {
+  background-color: $white;
+  color: darken($navyblue, 20%);
+  text-align: left;
+  height: auto;
+  overflow: scroll;
+  overflow-x: hidden;
+  max-height: 20rem;
+}
+
+.search_results .result {
+  margin: 0;
+  text-decoration: none;
+  @include hover-effect();
+}
+
+.search_results a {
+  padding: 0.75rem;
+  text-decoration: none;
+  color: darken($navyblue, 20%);
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search_results a .star {
+  font-size: 1rem;
+}
+
+.item_name {
+  width: 82%;
+}
+
+.stars {
+  width: 18%;
+  text-align: right;
+}
+
+.load_more {
+  border: none;
+  background-color: $white;
+  padding: 0.5rem;
+  height: 3rem;
+  color: $lightblue;
+  background-color: $navyblue;
+  width: 100%;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.load_more:disabled {
+  background: darken($white, 30%);
+  cursor: initial;
+  color: #6d6d6d;
+}
+
+@media only screen and (max-width: 600px) {
+  .item_name {
+    width: 72%;
+  }
+
+  .stars {
+    width: 28%;
+  }
+}

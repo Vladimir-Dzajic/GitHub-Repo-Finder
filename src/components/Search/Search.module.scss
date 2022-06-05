@@ -1,0 +1,63 @@
+@import '../../style/base';
+
+//loader and animation
+.loader {
+  margin: 1rem auto 0 auto;
+  border: 0.5rem solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 0.5rem solid darken($white, 30%);
+  width: 2rem;
+  height: 2rem;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+//loader and animation
+
+.search_results_container {
+  @include box-shadow();
+  margin: 1rem auto 2rem auto;
+  max-width: 35.5rem;
+}
+
+.error_container {
+  @include box-shadow();
+  margin: 2rem auto 2rem auto;
+  max-width: 35.5rem;
+  background-color: $white;
+  font-size: 1rem;
+  font-weight: bold;
+  color: $navyblue;
+  padding: 0;
+}
+
+.error_container p {
+  padding: 0.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .search_results_container {
+    margin: 2rem 0.5rem 2rem 0.5rem;
+  }
+  .error_container {
+    margin:0 0.5rem 0 0.5rem;
+  }
+}

@@ -1,14 +1,17 @@
 import './App.css';
-import Header from './components/Header';
-import Search from './components/Search';
-
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import Search from './components/Search/Search';
+import { SearchProvider } from './context/SearchContext';
 
 function App() {
-
   return (
     <div className="App">
       <Header />
-      <Search />
+      <SearchProvider>
+        <Search />
+      </SearchProvider>
+      <Footer />
     </div>
   );
 }

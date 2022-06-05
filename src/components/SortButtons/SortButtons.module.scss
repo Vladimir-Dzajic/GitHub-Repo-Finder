@@ -1,0 +1,43 @@
+@import '../../style/base';
+
+.sort_button_container {
+  padding: 0.75rem 0.5rem 0.75rem 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  background-color: $white;
+  color: $lightblue;
+}
+
+.sort_button_container button {
+  padding: 0.4rem;
+  font-weight: bold;
+  padding: 0.4rem;
+  cursor: pointer;
+}
+
+.sort_button_container button:nth-of-type(2) {
+  border-left: none;
+}
+
+.sort_button_container button:nth-of-type(3) {
+  margin-left: auto;
+}
+
+.btn_non_active,
+.sort_direction_btn {
+  background-color: $white;
+  color: $navyblue;
+  border: 2px solid $navyblue;
+}
+
+.btn_active {
+  background-color: $navyblue;
+  color: $lightblue;
+  border: 2px solid $navyblue;
+}
+
+.sort_direction_btn:hover {
+  transition: 0.3s;
+  background-color: $navyblue;
+  color: $lightblue;
+}
