@@ -1,6 +1,6 @@
 # GitHub Repo Finder 
 
-Find a repo and sort the results by name, rating and ascending und descending!
+Find a repo and sort the results by name, rating, ascending and descending!
 
 ## Getting Started
 
